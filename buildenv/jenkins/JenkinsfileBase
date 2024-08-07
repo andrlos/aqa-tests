@@ -583,6 +583,12 @@ def setup_jck_interactives() {
 				"""
 		}
 	}
+	sh(script: """
+	export JAVA_TO_TEST = "$(JAVA_COMMAND)"
+	if [ "${USE_JRE}" == "1" ]
+	  export JAVA_TO_TEST = "$(JRE_COMMAND)"
+	fi
+	""")
 }
 
 def getJobProperties() {
@@ -614,7 +620,7 @@ def get_sources() {
 			sh "$GET_SH_CMD"
 		}
 	}
-	if (params.SETUP_JCK_RUN && env.BUILD_LIST.contains('jck') && SDK_RESOURCE.contains('customized')) {
+	if (SDK_RESOURCE.contains('customized')) {
 		setup_jck_interactives()
 	}
 }
