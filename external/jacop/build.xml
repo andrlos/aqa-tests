@@ -22,7 +22,7 @@
 	<import file="${TEST_ROOT}/external/build.xml"/>
 	
 	<!-- set properties for this build -->
-	<property name="TEST" value="jacop" />
+	<property name="TEST" value="jacop_test" />
 	<property name="DEST" value="${BUILD_ROOT}/external/jacop" />
 	<property name="src" location="." />
 
