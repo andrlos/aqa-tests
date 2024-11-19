@@ -23,7 +23,7 @@
 	<!-- set properties for this build -->
 	<property name="TEST" value="jacop" />
 	<property name="DEST" value="${BUILD_ROOT}/functional/jacop" />
-	<property name="src" location="./jacop" />
+	<property name="src" location="./Jacop" />
 
 	<target name="init">
 		<mkdir dir="${DEST}"/>

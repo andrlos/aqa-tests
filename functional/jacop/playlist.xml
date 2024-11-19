@@ -14,7 +14,7 @@
 -->
 <playlist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../TKG/resources/playlist.xsd">
 	<test>
-		<testCaseName>jacop</testCaseName>
+		<testCaseName>Jacop</testCaseName>
 		<command>
 			bash jacop.sh; \
 			$(TEST_STATUS)
