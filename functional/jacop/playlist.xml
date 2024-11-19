@@ -16,7 +16,7 @@
 	<test>
 		<testCaseName>Jacop</testCaseName>
 		<command>
-			bash $(TEST_ROOT)$(D)functional$(D)jacop$(D)jacop.sh; \
+			bash $(TEST_ROOT)$(D)functional$(D)jacop$(D)Jacop$(D)jacop.sh; \
 			$(TEST_STATUS)
 		</command>
 		<levels>
