@@ -14,23 +14,24 @@
 # limitations under the License.
 -->
 
-<project name="jacop" default="build" basedir=".">
+<project name="Jacop-Test" default="build" basedir=".">
 	<taskdef resource="net/sf/antcontrib/antlib.xml" />
 	<description>
 		Multipurpose test of JVM, using a real project internal testing. Now using jacop version 4.0.
 	</description>
+	<import file="${TEST_ROOT}/external/build.xml"/>
 	
 	<!-- set properties for this build -->
 	<property name="TEST" value="jacop" />
-	<property name="DEST" value="${BUILD_ROOT}/functional/jacop" />
-	<property name="src" location="./Jacop" />
+	<property name="DEST" value="${BUILD_ROOT}/external/jacop" />
+	<property name="src" location="." />
 
 	<target name="init">
 		<mkdir dir="${DEST}"/>
         </target>
 
 
-	<target name="dist" description="generate the distribution">
+	<target name="dist" depends="move_scripts,clean_image,build_image" description="generate the distribution">
 		<copy todir="${DEST}">
 			<fileset dir="${src}" includes="*.xml, *.mk"/>
 		</copy>

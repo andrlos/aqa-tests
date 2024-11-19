@@ -14,16 +14,16 @@
 -->
 <playlist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../TKG/resources/playlist.xsd">
 	<test>
-		<testCaseName>Jacop</testCaseName>
-		<command>
-			bash $(TEST_ROOT)$(D)functional$(D)jacop$(D)Jacop$(D)jacop.sh; \
-			$(TEST_STATUS)
+		<testCaseName>jacop_test</testCaseName>
+		<command> $(TEST_ROOT)$(D)external$(D)external.sh --run --tag "${DOCKERIMAGE_TAG}" --dir jacop --reportdst $(REPORTDIR) --docker_args "$(EXTRA_DOCKER_ARGS)" ; \
+                $(TEST_STATUS); \
+                $(TEST_ROOT)$(D)external$(D)external.sh --clean --tag "${DOCKERIMAGE_TAG}" --dir jacop
 		</command>
 		<levels>
-			<level>dev</level>
+			<level>extended</level>
 		</levels>
 		<groups>
-			<group>functional</group>
+			<group>external</group>
 		</groups>
 		<platformRequirementsList>
 			<platformRequirements>os.linux</platformRequirements>
