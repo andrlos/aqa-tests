@@ -22,11 +22,6 @@ if [ "x$EX_MVN" == "x" ] ; then
 fi
 MVOPTS="--batch-mode"
 
-echo $JAVA_HOME
-export JAVA_HOME=$(readlink -f $JAVA_HOME)
-ls -l  `dirname $JAVA_HOME`
-ls -l  $JAVA_HOME
-
 pushd jacop-4.0.0
   sed "s;http://;https://;g" -i pom.xml
   sed "s;<version>2.10.3</version>;<version>2.12.12</version>;" -i pom.xml # bumping scala to jdk11+ scala
