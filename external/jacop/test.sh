@@ -22,9 +22,5 @@ if [ "x$EX_MVN" == "x" ] ; then
 fi
 MVOPTS="--batch-mode"
 
-sed "s;http://;https://;g" -i pom.xml
-sed "s;<version>2.10.3</version>;<version>2.12.12</version>;" -i pom.xml # bumping scala to jdk11+ scala
-sed "s;<maven.compiler.source>1.6</maven.compiler.source>;<maven.compiler.source>8</maven.compiler.source>;g"  -i pom.xml
-sed "s;<maven.compiler.target>1.6</maven.compiler.target>;<maven.compiler.target>8</maven.compiler.target>;g"  -i pom.xml
 $EX_MVN $MVOPTS clean install
 
