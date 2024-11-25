@@ -20,7 +20,9 @@ mvn --batch-mode clean install
 test_exit_code=$?
 echo "Build clojure completed"
 
+echo `find ./ -type d -name 'surefire-reports'`
 find ./ -type d -name 'surefire-reports' -exec cp -r "{}" /testResults \;
+echo `ls /testResults`
 echo "Test results copied"
 
 exit $test_exit_code
