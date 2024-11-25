@@ -16,3 +16,11 @@ source $(dirname "$0")/test_base_functions.sh
 echo_setup
 
 mvn --batch-mode clean install
+
+test_exit_code=$?
+echo "Build clojure completed"
+
+find ./ -type d -name 'surefire-reports' -exec cp -r "{}" /testResults \;
+echo "Test results copied"
+
+exit $test_exit_code
