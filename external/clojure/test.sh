@@ -15,15 +15,4 @@ source $(dirname "$0")/test_base_functions.sh
 #Set up Java to be used by the netty test
 echo_setup
 
-testList="-Dtest=!org.apache.zookeeper.server.quorum.QuorumPeerMainTest,!org.apache.zookeeper.server.quorum.QuorumPeerMainMultiAddressTest,!org.apache.zookeeper.ZKUtilTest,!org.apache.zookeeper.server.util.RequestPathMetricsCollectorTest,!org.apache.zookeeper.test.ReadOnlyModeTest,!org.apache.zookeeper.server.NettyServerCnxnTest,!org.apache.zookeeper.server.ZooKeeperServerMainTest,!org.apache.zookeeper.server.quorum.EagerACLFilterTest,!org.apache.zookeeper.server.quorum.Zab1_0Test,!org.apache.zookeeper.server.quorum.UnifiedServerSocketTest,!org.apache.zookeeper.server.quorum.CommitProcessorConcurrencyTest,!org.apache.zookeeper.server.util.JvmPauseMonitorTest"
-
-echo "Compile and run zookeeper tests"
-echo mvn test --batch-mode --fail-at-end $testList
-mvn test --batch-mode --fail-at-end $testList
-test_exit_code=$?
-echo "Build zookeeper completed"
-
-find ./ -type d -name 'surefire-reports' -exec cp -r "{}" /testResults \;
-echo "Test results copied"
-
-exit $test_exit_code
+mvn --batch-mode clean install

@@ -2,7 +2,7 @@
 <project name="Clojure-Test" default="build" basedir=".">
 	<taskdef resource="net/sf/antcontrib/antlib.xml" />
 	<description>
-		Build Zookeeper-Test Docker image
+		Build Clojure-Test Docker image
 	</description>
 	<import file="${TEST_ROOT}/external/build.xml"/>
 
