@@ -22,10 +22,10 @@ echo "Build clojure completed"
 
 
 echo `pwd`
-echo `ls`
+echo `ls /`
 echo `find .`
-echo `find ./ -type d -name 'surefire-reports'`
-find ./ -type d -name 'surefire-reports' -exec cp -r "{}" /testResults \;
+echo `find / -type d -name 'surefire-reports'`
+find / -type d -name 'surefire-reports' -exec cp -r "{}" /testResults \;
 echo `ls /testResults`
 echo "Test results copied"
 
