@@ -24,3 +24,11 @@ MVOPTS="--batch-mode"
 
 $EX_MVN $MVOPTS clean install
 
+test_exit_code=$?
+echo "Build jacop completed"
+
+find ./ -type d -name 'surefire-reports' -exec cp -r "{}" /testResults \;
+echo "Test results copied"
+
+exit $test_exit_code
+
