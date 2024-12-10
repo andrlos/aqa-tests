@@ -22,6 +22,8 @@
 
 # jdk_beans
 
+java/beans/XMLEncoder/java_awt_ScrollPane.java https://github.com/eclipse-openj9/openj9/issues/20531 macosx-all
+
 ############################################################################
 
 # jdk_lang
@@ -187,6 +189,8 @@ sun/management/jmxremote/startstop/JMXStatusTest.java     https://github.com/ado
 ############################################################################
 
 # jdk_jmx
+
+javax/management/security/HashedPasswordFileTest.java https://github.com/adoptium/aqa-tests/issues/1297 generic-all
 
 ############################################################################
 
@@ -403,6 +407,7 @@ sun/security/rsa/pss/SignatureTestPSS.java	https://github.ibm.com/runtimes/backl
 sun/security/ssl/CipherSuite/DisabledCurve.java	https://github.ibm.com/runtimes/backlog/issues/795	aix-all,windows-all
 sun/security/ssl/CipherSuite/NamedGroupsWithCipherSuite.java	https://github.ibm.com/runtimes/backlog/issues/795	aix-all,windows-all
 sun/security/ssl/CipherSuite/SupportedGroups.java	https://github.ibm.com/runtimes/backlog/issues/795	aix-all,windows-all
+sun/security/ssl/X509TrustManagerImpl/distrust/Symantec.java	https://github.com/eclipse-openj9/openj9/issues/16312	generic-all
 sun/security/ssl/X509TrustManagerImpl/Symantec/Distrust.java	https://github.com/adoptium/aqa-tests/issues/2123	generic-all
 sun/security/tools/jarsigner/PreserveRawManifestEntryAndDigest.java	https://github.ibm.com/runtimes/backlog/issues/795	aix-all
 sun/security/util/math/TestIntegerModuloP.java	https://github.com/eclipse-openj9/openj9/issues/15209	generic-all
@@ -574,8 +579,6 @@ serviceability/jvmti/thread/GetStackTrace/getstacktr05/getstacktr05.java https:/
 serviceability/jvmti/vthread/VThreadNotifyFramePopTest/VThreadNotifyFramePopTest.java https://github.com/adoptium/aqa-tests/issues/1297 aix-all
 serviceability/jvmti/RedefineClasses/RedefinePreviousVersions.java https://github.com/adoptium/aqa-tests/issues/1297 generic-all
 serviceability/jvmti/vthread/ToggleNotifyJvmtiTest/ToggleNotifyJvmtiTest.java https://github.com/adoptium/aqa-tests/issues/1297 generic-all
-serviceability/jvmti/vthread/FollowReferences/VThreadStackRefTest.java#default https://github.com/eclipse-openj9/openj9/issues/18426 generic-all
-serviceability/jvmti/vthread/FollowReferences/VThreadStackRefTest.java#no-vmcontinuations https://github.com/eclipse-openj9/openj9/issues/18426 generic-all
 serviceability/jvmti/thread/GetStackTrace/GetStackTraceAndRetransformTest/GetStackTraceAndRetransformTest.java https://github.com/eclipse-openj9/openj9/issues/18809 generic-all
 
 # jdk_container
