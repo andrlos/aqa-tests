@@ -87,6 +87,10 @@ JTREG_CONC ?= 0
 # Allow JTREG_CONC be set via parameter
 ifeq ($(JTREG_CONC), 0)
 	JTREG_CONC := $(CONC)
+    # check if JTREG_CONC is not empty now
+    ifeq ($(JTREG_CONC),)
+		JTREG_CONC := 0
+	endif
 	ifeq ($(JTREG_CONC), 0)
 		JTREG_CONC := 1
 	endif
